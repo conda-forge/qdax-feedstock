@@ -1,11 +1,11 @@
-About qdax
-==========
+About qdax-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qdax-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/adaptive-intelligent-robotics/QDax
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qdax-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python Library for Quality-Diversity and NeuroEvolution
 
