@@ -1,5 +1,5 @@
 {% set name = "qdax" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qdax-{{ version }}.tar.gz
-  sha256: 122498b32b6c0f8ef5bf9f3f85f83983eb642732d23a49d75bcdf649ea66f891
+  sha256: c35c6ac3d1c3dfa722f9f2b6a4583cd5d0c59a95f4c57e5b66c2eff2072bcdd0
 
 build:
   noarch: python
