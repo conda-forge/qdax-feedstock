@@ -1,0 +1,55 @@
+context:
+  name: qdax
+  version: 0.4.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/qdax-${{ version }}.tar.gz
+  sha256: 28bda31d7c65cdfe0c177b75176341922906efc8ec4f3a30a374ef996661c9cd
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - setuptools
+  run:
+    - python >=3.10
+    - numpy
+    - absl-py >=1.0.0
+    - brax >=0.10.4
+    - chex >=0.1.86
+    - flax >=0.8.5
+    - gymnasium >=0.26.2
+    - jax >=0.4.28
+    - jaxlib >=0.4.28
+    - jumanji >=0.3.1
+    - optax >=0.1.9
+    - scikit-learn >=1.5.1
+    - scipy >=1.10.1
+    - tensorflow-probability >=0.24.0
+    - typing-extensions >=4.12.2
+
+tests:
+  - python:
+      imports:
+        - qdax
+  - script:
+      - "python -c \"from qdax.core.map_elites import MAPElites; from qdax.utils.metrics import default_qd_metrics\""
+
+about:
+  summary: A Python Library for Quality-Diversity and NeuroEvolution
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/adaptive-intelligent-robotics/QDax
+
+extra:
+  recipe-maintainers:
+    - Tobias-Fischer
