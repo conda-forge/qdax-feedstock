@@ -1,5 +1,5 @@
 context:
-  name: qdax
+  name: "qdax"
   version: 0.4.0
 
 package:
@@ -40,14 +40,15 @@ requirements:
     - typing-extensions >=4.12.2
 
 tests:
-  - requirements:
-      run:
-        - python ${{ python_min }}
   - python:
       imports:
         - qdax
-  - script:
-      - "python -c \"from qdax.core.map_elites import MAPElites; from qdax.utils.metrics import default_qd_metrics\""
+  - script: |
+      python -c "from qdax.core.map_elites import MAPElites; from qdax.utils.metrics import default_qd_metrics"
+
+    requirements:
+      run:
+        - python ${{ python_min }}
 
 about:
   summary: A Python Library for Quality-Diversity and NeuroEvolution
