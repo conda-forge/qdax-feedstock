@@ -19,11 +19,11 @@ build:
 
 requirements:
   host:
-    - python 3.10
+    - python ${{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.10
+    - python >=${{ python_min }}
     - numpy
     - absl-py >=1.0.0
     - brax >=0.10.4
@@ -40,6 +40,9 @@ requirements:
     - typing-extensions >=4.12.2
 
 tests:
+  - requirements:
+      run:
+        - python ${{ python_min }}
   - python:
       imports:
         - qdax
