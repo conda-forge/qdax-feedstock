@@ -9,8 +9,6 @@ package:
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/qdax-${{ version }}.tar.gz
   sha256: 0ae1a1c9498301d216d061b52f167e6e2f6f3a8b906ca8c5bd4d951f3fc6bfd3
-  patches:
-    - fix-gym-dep.patch
 
 build:
   number: 0
