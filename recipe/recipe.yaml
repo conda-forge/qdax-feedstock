@@ -1,6 +1,6 @@
 context:
   name: "qdax"
-  version: 0.4.0
+  version: "0.4.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,9 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/qdax-${{ version }}.tar.gz
-  sha256: 28bda31d7c65cdfe0c177b75176341922906efc8ec4f3a30a374ef996661c9cd
-  patches:
-    - fix-gym-dep.patch
+  sha256: 0ae1a1c9498301d216d061b52f167e6e2f6f3a8b906ca8c5bd4d951f3fc6bfd3
 
 build:
   number: 0
